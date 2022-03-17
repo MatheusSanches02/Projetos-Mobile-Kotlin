@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
                 alert("Boas vindas", msg)
             }
         }
-
     }
     fun camposValidos() : Boolean{
         if(txtNome.text.trim().isEmpty() || txtTelefone.text.trim().isEmpty() || spinnerTipoTelefone.selectedItemPosition == 0
