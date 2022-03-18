@@ -16,11 +16,24 @@ class Calculadora : AppCompatActivity() {
         val valor2 = findViewById<EditText>(R.id.n2);
 
         btnCalcular.setOnClickListener{view : View ->
+            var result = 0.0;
             val num1 = valor1.text.toString().toDouble();
             val num2 = valor2.text.toString().toDouble();
             if(rbSoma.isChecked){
-                var result  = num1 + num2;
-                Toast.makeText(this,"A soma dos valores é: ${result}", Toast.LENGTH_LONG).show()
+                result  = num1 + num2;
+                Toast.makeText(this,"A soma dos valores é: ${String.format("%.2f",result)}", Toast.LENGTH_LONG).show();
+            }
+            else if(rbSubtracao.isChecked){
+                result = num1 - num2;
+                Toast.makeText(this, "A subtração dos valores é: ${String.format("%.2f",result)}", Toast.LENGTH_LONG).show();
+            }
+            else if(rbDivisao.isChecked){
+                result = num1 / num2;
+                Toast.makeText(this, "A divisão dos valores é: ${String.format("%.2f",result)}", Toast.LENGTH_LONG).show();
+            }
+            else if(rbMultiplicacao.isChecked){
+                result = num1 * num2;
+                Toast.makeText(this, "A multiplicação dos valores é: ${String.format("%.2f",result)}", Toast.LENGTH_LONG).show();
             }
         }
 

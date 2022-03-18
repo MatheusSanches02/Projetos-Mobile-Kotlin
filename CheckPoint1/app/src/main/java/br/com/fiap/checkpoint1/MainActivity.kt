@@ -24,10 +24,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentResultado)
         }
 
+        btnTelefonica.setOnClickListener{view : View? ->
+            var intentResultado = Intent(this, ContaTelefonica::class.java);
+            intentResultado.putExtra("msg", "teste")
+            startActivity(intentResultado)
+        }
+
     }
-
-
-
     fun integrantes(){
         val dialog = AlertDialog.Builder(this);
         dialog

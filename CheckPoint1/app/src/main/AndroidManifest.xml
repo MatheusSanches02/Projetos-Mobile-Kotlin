@@ -10,8 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CheckPoint1">
         <activity
+            android:name=".TelaResultado"
+            android:parentActivityName=".ContaTelefonica" />
+        <activity
+            android:name=".ContaTelefonica"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".Calculadora"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
